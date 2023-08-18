@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Etch-A-Sketch</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1> Draw Something!</h1>
+        <div id="sketchPadDiv"></div>
+    </body>
+    <script>
+        const sketchPadDiv = document.getElementById('sketchPadDiv');
+
+        for(let x = 0; x < 256; x++) {
+            const gridDiv = document.createElement('div');
+            sketchPadDiv.appendChild(gridDiv);
+        }
+    </script>
+</html>
