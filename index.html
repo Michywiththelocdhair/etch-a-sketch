@@ -16,5 +16,18 @@
             const gridDiv = document.createElement('div');
             sketchPadDiv.appendChild(gridDiv);
         }
+      //
+      sketchPadDiv.addEventListener('mousedown', function() {
+            isMouseDown = true;
+        });
+      sketchPadDiv.addEventListener('mouseup', function() {
+            isMouseDown = false;
+        });
+      sketchPadDiv.addEventListener('mousemove', function(event) {
+            if (isMouseDown) {
+                event.target.style.backgroundColor = 'gray';
+            }
+      }
+    );
     </script>
 </html>
